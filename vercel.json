@@ -1,0 +1,26 @@
+{
+  "services": {
+    "frontend": {
+      "root": ".",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://sih-26-swarsanket-backend.onrender.com/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "frontend"
+      }
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "DiPS": false
+    }
+  }
+}
